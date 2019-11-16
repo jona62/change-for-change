@@ -6,8 +6,6 @@ import food_pantries from "../constants/food_pantries.js";
 import soup_kitchens from "../constants/soup_kitchens.js";
 import { ButtonGroup, ToggleButton } from "react-bootstrap";
 
-const API_KEY = "AIzaSyD08DikONH9LIz7zVfJFQ0GOobFDYqGD4g";
-
 class MapContainer extends React.Component {
   constructor(props) {
     super(props);
