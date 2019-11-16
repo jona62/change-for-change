@@ -48,28 +48,34 @@ class MapContainer extends React.Component {
         }
       );
     }
+    console.log(arr);
     return arr;
   }
 
   handleClick(name) {
     switch (name) {
-      case "food_pantry":
-        this.setState({ data: this.setAddresses(food_pantries)});
-        console.log(this.state.data);
+      case "food_pantry": {
+        const arr = this.setAddresses(food_pantries);
+        this.setState({ data: arr });
         break;
-      case "senior_centers":
-        this.setState({ data: this.setAddresses(senior_centers) });
+      }
+      case "senior_centers": {
+        const arr = this.setAddresses(senior_centers);
+        this.setState({ data: arr });
         break;
-      case "soup_kitchen":
-        this.setState({ data: this.setAddresses(soup_kitchens) });
+      }
+      case "soup_kitchen": {
+        const arr = this.setAddresses(soup_kitchens);
+        this.setState({ data: arr });
         break;
+      }
       default:
         console.error("Invalid Option");
     }
   }
 
   componentDidMount() {
-    this.setState({ data: this.setAddresses(food_pantries)});
+    this.setState({ data: this.setAddresses(food_pantries) });
     console.log(this.state.data);
   }
 
@@ -132,8 +138,8 @@ class MapContainer extends React.Component {
             zoom={6}
             style={mapStyles}
             initialCenter={{
-              lat: 40.697440,
-              lng: -73.979440
+              lat: 40.69744,
+              lng: -73.97944
             }}
           >
             {this.displayMarkers()}
